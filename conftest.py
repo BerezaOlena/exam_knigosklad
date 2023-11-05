@@ -30,22 +30,22 @@ def browser(request):
 
     if browser_name == "chrome":
         print(f"\nstart {browser_name} browser for test..")
-        opts_chrome.add_argument('window_size=1200, 800')
+        # opts_chrome.add_argument('window_size=1200, 800')
         browser = webdriver.Chrome(options=opts_chrome)
     elif browser_name == "firefox":
         print(f"\nstart {browser_name} browser for test..")
-        opts_firefox.add_argument('--width=1200')
-        opts_firefox.add_argument('--height=800')
+        # opts_firefox.add_argument('--width=1200')
+        # opts_firefox.add_argument('--height=800')
         browser = webdriver.Firefox(options=opts_firefox)
     else:
         raise pytest.UsageError("--browser_name should be chrome or firefox")
-    #
-    # if browser_window_size == "max":
-    #     browser.maximize_window()
-    # elif browser_window_size == "norma":
-    #     browser.set_window_size(1200, 800)
-    # else:
-    #     print("must be max or norma")
+
+    if browser_window_size == "max":
+        browser.maximize_window()
+    elif browser_window_size == "norma":
+        browser.set_window_size(1200, 800)
+    else:
+        print("must be max or norma")
 
     yield browser
     print("\nquit browser..")
