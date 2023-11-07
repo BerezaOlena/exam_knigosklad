@@ -14,7 +14,7 @@ def pytest_addoption(parser):
     parser.addoption('--browser_window_size', action='store', default="norma",
                      help="By default is norma mode, but you can set --browser_window_size='max'")
 
-@pytest.fixture()
+@pytest.fixture(scope="class")
 def browser(request):
     browser_mode = request.config.getoption("browser_mode")
     browser_name = request.config.getoption("browser_name")

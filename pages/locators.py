@@ -3,21 +3,22 @@ from selenium.webdriver.common.by import By
 
 class BasePageLocators:
     # HEADER
-    O_NAS = (By.XPATH, "//div[@class='top-block-2']//a[@href='https://knigosklad.com.ua/ua/o - nas']")
-    OPLATA_DOSTAVKA = (By.XPATH, "//div[@class='top-block-2']//a[@href='https://knigosklad.com.ua/ua/oplata-dostavka']")
+    O_NAS = (By.XPATH, "//div[@class='top-block-2']//a[@href='https://knigosklad.com.ua/ua/o-nas']")
+    PAYMENT_DELIVERY = (By.XPATH, "//div[@class='top-block-2']//a[@href='https://knigosklad.com.ua/ua/oplata-dostavka']")
     CONTACTS = (By.XPATH, "//div[@class='top-block-2']//a[@href='https://knigosklad.com.ua/ua/contacts']")
     LANGUAGE_UKR = (By.XPATH, "//span[text()='Укр']")
-    LANGUAGE_RUS = (By.XPATH, "//span[text()='Рус']")
-    SEARCH = (By.XPATH, "//input[@id='search_41']")
+    LANGUAGE_RUS = (By.XPATH, "//a[text()='Рус']")
+    SEARCH_INPUT = (By.XPATH, "//input[@id='search_546']")
+    SEARCH = (By.XPATH, "//form[@id='search_mini_form_546']//span[text()='Пошук']")
     LOGO_KS = (By.XPATH, "//img[@src='https://knigosklad.com.ua/media/logo_ks.png']")
     CONTACTS1 = (By.XPATH, "//a[text()='050-057-50-97']")
     CONTACTS2 = (By.XPATH, "//a[text()='096-217-40-10']")
     CONTACTS3 = (By.XPATH, "//a[text()='093-113-51-46']")
-    CALLBACK_BUTTON = (By.XPATH, "//a[@id='callback-button']")
+    CALLBACK = (By.XPATH, "//a[@id='callback-button']")
     CONTACTS_ICON = (By.XPATH, "//i[@class='fa fa-phone']")
     LOGIN_SIGNUP_ICON = (By.XPATH, "//i[@class='fa fa-user']")
-    LOGIN_SIGNUP = (By.XPATH, "//a[@href='https://knigosklad.com.ua/ua/customer/account"
-                              "/login/referer/aHR0cHM6Ly9rbmlnb3NrbGFkLmNvbS51YS91YS8,']")
+    LOGIN_SIGNUP = (
+        By.XPATH, "//a[@href='https://knigosklad.com.ua/ua/customer/account/login/referer/aHR0cHM6Ly9rbmlnb3NrbGFkLmNvbS51YS91YS8,/']")
     CART_ICON = (By.XPATH, "//div[@class='cart-wrapper']//a[@class='top-cart-icon']")
     CART = (By.XPATH, "//div[@class='cart-wrapper']//span[@class='cart-qty']")
 
@@ -27,11 +28,11 @@ class BasePageLocators:
     SUBSCRIBED_FOOTER = (By.XPATH, "//span[text()='Розсилка']")
     SUBSCRIBED_LABEL_FOOTER = (
         By.XPATH, "//label[text()='Підпишіться, щоб бути в курсі нових надходжень і спеціальних пропозицій']")
-    SUBSCRIBED_EMAIL_FOOTER = (By.XPATH, "//input[@id='newsletter-654']")
+    SUBSCRIBED_EMAIL_FOOTER = (By.XPATH, "//input[@name='email']")
     SUBSCRIBED_BUTTON_FOOTER = (By.XPATH, "//button[@title='Підписатись']")
     O_NAS_FOOTER = (By.XPATH, "//footer[@id='footer']//a[@href='https://knigosklad.com.ua/ua/o-nas']")
-    OPLATA_DOSTAVKA_FOOTER = (By.XPATH,
-                              "//footer[@id='footer']//a[@href='https://knigosklad.com.ua/ua/oplata-dostavka']")
+    PAYMENT_DELIVERY_FOOTER = (
+        By.XPATH, "//footer[@id='footer']//a[@href='https://knigosklad.com.ua/ua/oplata-dostavka']")
     CONTACTS_FOOTER = (By.XPATH, "//footer[@id='footer']//a[@href='https://knigosklad.com.ua/ua/contacts']")
     OFFER_FOOTER = (By.XPATH, "//footer[@id='footer']//a[@href='https://knigosklad.com.ua/ua/offer']")
     POLICY_FOOTER = (By.XPATH, "//footer[@id='footer']//a[@href='https://knigosklad.com.ua/ua/policy']")
@@ -39,13 +40,14 @@ class BasePageLocators:
     ADDRESS_FOOTER = (By.XPATH, "//address[text()='© 2023 КнигоСклад']")
     MADE_IN_FOOTER = (By.XPATH, "//div[@class='pull-right made-in']")
 
-    # BODY
 
-    HUDOZHESTVENNAJA_LITERATURA = (
+class MainPageLocators:
+    # BODY
+    FICTION_LITERATURE = (
         By.XPATH, "//div[@class='wrapper-menu clearfix aside-nav']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja']")
-    ISTORICHESKAJA_LITERATURA = (
+    HISTORICAL_LITERATURE = (
         By.XPATH, "//div[@class='wrapper-menu clearfix aside-nav']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/istoricheskaja-literatura']")
-    ISTORICHESKIE_ROMANY = (
+    HISTORICAL_NOVELS = (
         By.XPATH, "//div[@class='wrapper-menu clearfix aside-nav']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/istoricheskaja-literatura/istoricheskie-romany']")
 
     SLIDE_MENU_1 = (By.XPATH, "//li[@data-link='detskaja/hudozhestvennaja']")
@@ -62,7 +64,7 @@ class BasePageLocators:
     NOVELTY_BOOKS_3 = (
         By.XPATH, "//div[@class='product-name']//a[@href='https://knigosklad.com.ua/ua/bridzhertoni-gercog-i-ja-ukr']")
 
-    BESTSELLERS_TEXT = (By.XPATH, "//h2[text()='Бестселери']")
+    BESTSELLERS_TEXT = (By.XPATH, "//div[text()='Бестселери']")
     BESTSELLERS_BOOKS_2 = (
         By.XPATH, "//div[@class='product-name']//a[@href='https://knigosklad.com.ua/ua/peremagati-ukrains-koju-pro-movu-nenavisti-j-ljubovi-kn-3-m']")
 
