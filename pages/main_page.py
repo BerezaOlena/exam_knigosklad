@@ -35,7 +35,7 @@ class MainPage(base_page.BasePage):
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_button_search(self):
-        assert self.is_element_present(*locators.BasePageLocators.SEARCH), \
+        assert self.is_element_present(*locators.BasePageLocators.SEARCH_BUTTON), \
             "Button 'search' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
