@@ -35,6 +35,12 @@ class TestMainPage:
         page.is_button_login_signup()
         page.is_button_cart_icon()
         page.is_button_cart()
+        page.is_button_catalog_scrolling()
+        page.is_button_catalog_button_scrolling()
+        page.is_button_logo_scrolling()
+        page.is_button_search_button_scrolling()
+        page.is_button_cart_scrolling()
+        page.is_button_cart_count_scrolling()
 
     def test_main_page_body(self, browser):
         self.link_to_cabinet = browser.current_url

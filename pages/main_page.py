@@ -89,6 +89,36 @@ class MainPage(base_page.BasePage):
             "Button 'cart' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
+    def is_button_catalog_scrolling(self):
+        assert self.is_element_present(*locators.BasePageLocators.CATALOG_SCROLLING), \
+            "Button 'catalog_scrolling' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_button_catalog_button_scrolling(self):
+        assert self.is_element_present(*locators.BasePageLocators.CATALOG_BUTTON_SCROLLING), \
+            "Button 'catalog_button_scrolling' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_button_logo_scrolling(self):
+        assert self.is_element_present(*locators.BasePageLocators.LOGO_SCROLLING), \
+            "Button 'logo_scrolling' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_button_search_button_scrolling(self):
+        assert self.is_element_present(*locators.BasePageLocators.SEARCH_BUTTON_SCROLLING), \
+            "Button 'search_button_scrolling' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_button_cart_scrolling(self):
+        assert self.is_element_present(*locators.BasePageLocators.CART_SCROLLING), \
+            "Button 'cart_scrolling' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_button_cart_count_scrolling(self):
+        assert self.is_element_present(*locators.BasePageLocators.CART_COUNT_SCROLLING), \
+            "Button 'cart_count_scrolling' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
     # BODY
     def is_button_fiction_literature(self):
         assert self.is_element_present(*locators.MainPageLocators.FICTION_LITERATURE), \

@@ -22,6 +22,14 @@ class BasePageLocators:
     CART_ICON = (By.XPATH, "//div[@class='cart-wrapper']//a[@class='top-cart-icon']")
     CART = (By.XPATH, "//div[@class='cart-wrapper']//span[@class='cart-qty']")
 
+    CATALOG_SCROLLING = (By.XPATH, "//header[@id='sticky-header']//span[@class='catalog-menu-text']")
+    CATALOG_BUTTON_SCROLLING = (
+        By.XPATH, "//header[@id='sticky-header']//div[@class='pull-left']//button[@type='button']")
+    LOGO_SCROLLING = (By.XPATH, "//header[@id='sticky-header']//span[@class='logo']")
+    SEARCH_BUTTON_SCROLLING = (By.XPATH, "//header[@id='sticky-header']//div[@class='search-button']")
+    CART_SCROLLING = (By.XPATH, "//header[@id='sticky-header']//a[@class='top-cart-icon']")
+    CART_COUNT_SCROLLING = (By.XPATH, "//header[@id='sticky-header']//span[@class='cart-qty']")
+
     # FOOTER
     LOGO_KS_MINI_FOOTER = (
         By.XPATH, "//footer[@id='footer']//img[@src='https://knigosklad.com.ua/media/wysiwyg/logo_ks_mini.png']")
