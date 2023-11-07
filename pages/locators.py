@@ -4,7 +4,8 @@ from selenium.webdriver.common.by import By
 class BasePageLocators:
     # HEADER
     O_NAS = (By.XPATH, "//div[@class='top-block-2']//a[@href='https://knigosklad.com.ua/ua/o-nas']")
-    PAYMENT_DELIVERY = (By.XPATH, "//div[@class='top-block-2']//a[@href='https://knigosklad.com.ua/ua/oplata-dostavka']")
+    PAYMENT_DELIVERY = (
+    By.XPATH, "//div[@class='top-block-2']//a[@href='https://knigosklad.com.ua/ua/oplata-dostavka']")
     CONTACTS = (By.XPATH, "//div[@class='top-block-2']//a[@href='https://knigosklad.com.ua/ua/contacts']")
     LANGUAGE_UKR = (By.XPATH, "//span[text()='Укр']")
     LANGUAGE_RUS = (By.XPATH, "//a[text()='Рус']")
@@ -18,13 +19,23 @@ class BasePageLocators:
     CONTACTS_ICON = (By.XPATH, "//i[@class='fa fa-phone']")
     LOGIN_SIGNUP_ICON = (By.XPATH, "//i[@class='fa fa-user']")
     LOGIN_SIGNUP = (
-        By.XPATH, "//a[@href='https://knigosklad.com.ua/ua/customer/account/login/referer/aHR0cHM6Ly9rbmlnb3NrbGFkLmNvbS51YS91YS8,/']")
+        By.XPATH,
+        "//a[@href='https://knigosklad.com.ua/ua/customer/account/login/referer/aHR0cHM6Ly9rbmlnb3NrbGFkLmNvbS51YS91YS8,/']")
     CART_ICON = (By.XPATH, "//div[@class='cart-wrapper']//a[@class='top-cart-icon']")
     CART = (By.XPATH, "//div[@class='cart-wrapper']//span[@class='cart-qty']")
 
     CATALOG_SCROLLING = (By.XPATH, "//header[@id='sticky-header']//span[@class='catalog-menu-text']")
     CATALOG_BUTTON_SCROLLING = (
         By.XPATH, "//header[@id='sticky-header']//div[@class='pull-left']//button[@type='button']")
+    FICTION_LITERATURE_SCROLLING = (
+        By.XPATH,
+        "//div[@class='pull-left top-menu aside-nav']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja']")
+    HISTORICAL_LITERATURE_SCROLLING = (
+        By.XPATH,
+        "//div[@class='pull-left top-menu aside-nav']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/istoricheskaja-literatura']")
+    HISTORICAL_NOVELS_SCROLLING = (
+        By.XPATH,
+        "//div[@class='pull-left top-menu aside-nav']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/istoricheskaja-literatura/istoricheskie-romany']")
     LOGO_SCROLLING = (By.XPATH, "//header[@id='sticky-header']//span[@class='logo']")
     SEARCH_BUTTON_SCROLLING = (By.XPATH, "//header[@id='sticky-header']//div[@class='search-button']")
     CART_SCROLLING = (By.XPATH, "//header[@id='sticky-header']//a[@class='top-cart-icon']")
@@ -52,11 +63,14 @@ class BasePageLocators:
 class MainPageLocators:
     # BODY
     FICTION_LITERATURE = (
-        By.XPATH, "//div[@class='wrapper-menu clearfix aside-nav']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja']")
+        By.XPATH,
+        "//div[@class='wrapper-menu clearfix aside-nav']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja']")
     HISTORICAL_LITERATURE = (
-        By.XPATH, "//div[@class='wrapper-menu clearfix aside-nav']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/istoricheskaja-literatura']")
+        By.XPATH,
+        "//div[@class='wrapper-menu clearfix aside-nav']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/istoricheskaja-literatura']")
     HISTORICAL_NOVELS = (
-        By.XPATH, "//div[@class='wrapper-menu clearfix aside-nav']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/istoricheskaja-literatura/istoricheskie-romany']")
+        By.XPATH,
+        "//div[@class='wrapper-menu clearfix aside-nav']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/istoricheskaja-literatura/istoricheskie-romany']")
 
     SLIDE_MENU_1 = (By.XPATH, "//li[@data-link='detskaja/hudozhestvennaja']")
     SLIDE_MENU_2 = (By.XPATH, "//li[@data-link='obrazovanie/srednjaja-shkola/vneklassnoe-chtenie']")
@@ -74,11 +88,13 @@ class MainPageLocators:
 
     BESTSELLERS_TEXT = (By.XPATH, "//div[text()='Бестселери']")
     BESTSELLERS_BOOKS_2 = (
-        By.XPATH, "//div[@class='product-name']//a[@href='https://knigosklad.com.ua/ua/peremagati-ukrains-koju-pro-movu-nenavisti-j-ljubovi-kn-3-m']")
+        By.XPATH,
+        "//div[@class='product-name']//a[@href='https://knigosklad.com.ua/ua/peremagati-ukrains-koju-pro-movu-nenavisti-j-ljubovi-kn-3-m']")
 
     POPULAR_CATEGORIES_TEXT = (By.XPATH, "//div[text()='Популярні категорії']")
     POPULAR_CATEGORIES_2 = (By.XPATH, "//a[text()='Освіта']")
     POPULAR_CATEGORIES_2_TEXT = (
-        By.XPATH, "//span[text()='Навчальні посібники, енциклопедії, словники, решітки, прописи — все, що потрібно школярам, абітурієнтам та студентам']")
+        By.XPATH,
+        "//span[text()='Навчальні посібники, енциклопедії, словники, решітки, прописи — все, що потрібно школярам, абітурієнтам та студентам']")
 
     READ_TOGETHER = (By.XPATH, "//h2[text()='Читайте разом із Книгоскладом!']")

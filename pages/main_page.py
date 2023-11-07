@@ -99,6 +99,21 @@ class MainPage(base_page.BasePage):
             "Button 'catalog_button_scrolling' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
+    def is_button_fiction_literature_scrolling(self):
+        assert self.is_element_present(*locators.BasePageLocators.FICTION_LITERATURE_SCROLLING), \
+            "Button 'fictional_literature_scrolling' is not present"
+        print(f"\n{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_button_historical_literature_scrolling(self):
+        assert self.is_element_present(*locators.BasePageLocators.HISTORICAL_LITERATURE_SCROLLING), \
+            "Button 'historical_literature_scrolling' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_button_historical_novels_scrolling(self):
+        assert self.is_element_present(*locators.BasePageLocators.HISTORICAL_NOVELS_SCROLLING), \
+            "Button 'historical_novels_scrolling' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
     def is_button_logo_scrolling(self):
         assert self.is_element_present(*locators.BasePageLocators.LOGO_SCROLLING), \
             "Button 'logo_scrolling' is not present"
@@ -280,5 +295,3 @@ class MainPage(base_page.BasePage):
         assert self.is_element_present(*locators.BasePageLocators.MADE_IN_FOOTER), \
             "Button 'made_in_footer' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
-
-
