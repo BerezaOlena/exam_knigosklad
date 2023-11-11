@@ -256,9 +256,19 @@ class MainPage(base_page.BasePage):
             "Button 'subscribed_email_footer' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
+    def is_button_subscribed_email_footer_input(self, email):
+        assert self.input_data(*locators.BasePageLocators.SUBSCRIBED_EMAIL_FOOTER, email), \
+            "Button 'subscribed_email_footer_input' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
     def is_button_subscribed_button_footer(self):
         assert self.is_element_present(*locators.BasePageLocators.SUBSCRIBED_BUTTON_FOOTER), \
             "Button 'subscribed_button_footer' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_button_subscribed_button_footer_push(self):
+        assert self.click_element(*locators.BasePageLocators.SUBSCRIBED_BUTTON_FOOTER), \
+            "Button 'subscribed_button_footer_push' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_button_o_nas_footer(self):

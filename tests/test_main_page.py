@@ -2,6 +2,8 @@ import pytest
 from ..pages.base_page import BasePage
 from ..pages.main_page import MainPage
 from ..settings import sets
+import random
+
 
 @pytest.mark.smoke
 @pytest.mark.regression
@@ -9,7 +11,8 @@ from ..settings import sets
 class TestMainPage:
 
     def setup_method(self):
-        pass
+        user_name = "%032x" % random.getrandbits(128)
+        self.email_for_subscribe = f"{user_name}@mail.com"
 
     def test_get_main_page(self, browser):
         page = BasePage(browser, sets.MAIN_LINK)
@@ -85,7 +88,8 @@ class TestMainPage:
         page.is_button_address_footer()
         page.is_button_made_in_footer()
 
-
-
-
-
+    def test_main_page_subscribed_action(self, browser):
+        self.link_to_cabinet = browser.current_url
+        page = MainPage(browser, self.link_to_cabinet)
+        page.is_button_subscribed_email_footer_input(self.email_for_subscribe)
+        page.is_button_subscribed_button_footer_push()

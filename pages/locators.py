@@ -5,7 +5,7 @@ class BasePageLocators:
     # HEADER
     O_NAS = (By.XPATH, "//div[@class='top-block-2']//a[@href='https://knigosklad.com.ua/ua/o-nas']")
     PAYMENT_DELIVERY = (
-    By.XPATH, "//div[@class='top-block-2']//a[@href='https://knigosklad.com.ua/ua/oplata-dostavka']")
+        By.XPATH, "//div[@class='top-block-2']//a[@href='https://knigosklad.com.ua/ua/oplata-dostavka']")
     CONTACTS = (By.XPATH, "//div[@class='top-block-2']//a[@href='https://knigosklad.com.ua/ua/contacts']")
     LANGUAGE_UKR = (By.XPATH, "//span[text()='Укр']")
     LANGUAGE_RUS = (By.XPATH, "//a[text()='Рус']")
@@ -98,3 +98,57 @@ class MainPageLocators:
         "//span[text()='Навчальні посібники, енциклопедії, словники, решітки, прописи — все, що потрібно школярам, абітурієнтам та студентам']")
 
     READ_TOGETHER = (By.XPATH, "//h2[text()='Читайте разом із Книгоскладом!']")
+
+
+class SignupLoginPageLocators:
+    LOGIN_TEXT = (By.XPATH, "//h3[text()='Вхід']")
+    LOGIN_PUSH = (By.XPATH, "//div[@class='page-title clearfix']//a[text()='Вхід']")
+    LOGIN_EMAIL_TEXT = (By.XPATH, "//label[@for='email']")
+    LOGIN_EMAIL = (By.XPATH, "//input[@name='login[username]']")
+    LOGIN_PASSWORD_TEXT = (By.XPATH, "//label[@for='pass']")
+    LOGIN_PASSWORD = (By.XPATH, "//input[@name='login[password]']")
+    REMEMBER_ME = (By.XPATH, "//li[@id='remember-me-box-login']//input[@name='persistent_remember_me']")
+    LOGIN = (By.XPATH, "//span[text()='Вхід']")
+    FORGOT_PASS = (By.XPATH, "//a[text()='Забули пароль?']")
+    # LOGIN_SUCCESSFUL = (By.XPATH, "//div[@id='window-overlay-login']")
+    SIGNUP = (By.XPATH, "//a[text()='Зареєструватись']")
+    PERSONAL_INFO = (By.XPATH, "//h3[text()='Персональна інформація']")
+    FIRSTNAME_TEXT = (By.XPATH, "//label[@for='firstname']")
+    FIRSTNAME = (By.XPATH, "//input[@name='firstname']")
+    LASTNAME_TEXT = (By.XPATH, "//label[@for='lastname']")
+    LASTNAME = (By.XPATH, "//input[@name='lastname']")
+    EMAIL_TEXT = (
+        By.XPATH, "//form[@action='https://knigosklad.com.ua/ua/customer/account/createpost/']//label[text()='E-mail']")
+    EMAIL = (
+        By.XPATH, "//form[@action='https://knigosklad.com.ua/ua/customer/account/createpost/']//input[@name='email']")
+    SUBSCRIBED_CHECKBOX = (By.XPATH, "//input[@name='is_subscribed']")
+    SUBSCRIBED_TEXT = (By.XPATH, "//label[@for='is_subscribed']")
+    PASSWORD_TITLE = (By.XPATH, "//h3[text()='Пароль']")
+    PASSWORD_TEXT = (By.XPATH, "//label[@for='password']")
+    PASSWORD = (By.XPATH, "//input[@id='password']")
+    PASSWORD_CONFIRM_TEXT = (By.XPATH, "//label[@for='confirmation']")
+    PASSWORD_CONFIRM = (By.XPATH, "//input[@id='confirmation']")
+    REMEMBERME_CHECKBOX = (By.XPATH, "//li[@id='remember-me-box-register']//input[@class='checkbox']")
+    REMEMBERME_TEXT = (By.XPATH, "//label[@for='remember_meRjf64EvMct']")
+    SIGNUP_BUTTON = (By.XPATH, "//span[text()='Зареєструватись']")
+    # REGISTER_SUCCESSFUL = (By.XPATH, "//div[@id='window-overlay-register']")
+    CLOSE_BUTTON = (By.XPATH, "//div[@class='login-wrapper']//div[@class='close-popup']")
+
+    USER_BUTTON = (By.XPATH, "//span[@class='user-icon']")
+    LOGOUT = (By.XPATH, "//a[@href='https://knigosklad.com.ua/ua/customer/account/logout/']")
+
+
+class CabinetPageLocators:
+    pass
+
+
+class CategoryPageLocators:
+    pass
+
+
+class OrderPageLocators:
+    pass
+
+
+class SearchPageLocators:
+    pass
