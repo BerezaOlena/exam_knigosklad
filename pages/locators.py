@@ -110,7 +110,7 @@ class SignupLoginPageLocators:
     REMEMBER_ME = (By.XPATH, "//li[@id='remember-me-box-login']//input[@name='persistent_remember_me']")
     LOGIN = (By.XPATH, "//span[text()='Вхід']")
     FORGOT_PASS = (By.XPATH, "//a[text()='Забули пароль?']")
-    # LOGIN_SUCCESSFUL = (By.XPATH, "//div[@id='window-overlay-login']")
+
     SIGNUP = (By.XPATH, "//a[text()='Зареєструватись']")
     PERSONAL_INFO = (By.XPATH, "//h3[text()='Персональна інформація']")
     FIRSTNAME_TEXT = (By.XPATH, "//label[@for='firstname']")
@@ -131,15 +131,33 @@ class SignupLoginPageLocators:
     REMEMBERME_CHECKBOX = (By.XPATH, "//li[@id='remember-me-box-register']//input[@class='checkbox']")
     REMEMBERME_TEXT = (By.XPATH, "//label[@for='remember_meRjf64EvMct']")
     SIGNUP_BUTTON = (By.XPATH, "//span[text()='Зареєструватись']")
-    # REGISTER_SUCCESSFUL = (By.XPATH, "//div[@id='window-overlay-register']")
+
     CLOSE_BUTTON = (By.XPATH, "//div[@class='login-wrapper']//div[@class='close-popup']")
 
-    USER_BUTTON = (By.XPATH, "//span[@class='user-icon']")
-    LOGOUT = (By.XPATH, "//a[@href='https://knigosklad.com.ua/ua/customer/account/logout/']")
-
+    REGISTER_SUCCESSFUL = (By.XPATH, "//div[@id='window-overlay-register']")
+    LOGIN_SUCCESSFUL = (By.XPATH, "//div[@id='window-overlay-login']")
 
 class CabinetPageLocators:
-    pass
+    USER_BUTTON = (By.XPATH, "//span[@class='user-icon']")
+    LINK_ACCOUNT = (By.XPATH, "//a[@href='https://knigosklad.com.ua/ua/customer/account/']")
+    LINK_WISHLIST = (By.XPATH, "//a[@href='https://knigosklad.com.ua/ua/wishlist/']")
+    LINK_CHECKOUT = (By.XPATH, "//a[@href='https://knigosklad.com.ua/ua/checkout/']")
+    LOGOUT = (By.XPATH, "//a[@href='https://knigosklad.com.ua/ua/customer/account/logout/']")
+    TITLE_ACCOUNT = (By.XPATH, "//h1[text()='Моя робоча область']")
+    WELCOME_TEXT = (By.XPATH, "//h3[@class='hello panel-title']")
+    ACCOUNT_INFO = (By.XPATH, "//h2[text()='Інформація по аккаунту']")
+    CONTACT_INFO = (By.XPATH, "//h3[text()='Контактна інформація']")
+    INFO_LETTER = (By.XPATH, "//h3[text()='Інформаційні листи']")
+    ADDRESS = (By.XPATH, "//h2[text()='Адресна книга']")
+    DEFAULT_PAYMENT = (By.XPATH, "//h3[text()='Адреса оплати за замовчуванням']")
+    DEFAULT_ADDRESS = (By.XPATH, "//h3[text()='Адреса доставки За замовчуванням']")
+    MY_ACCOUNT = (By.XPATH, "//span[text()='Мій аккаунт']")
+    INFO = (By.XPATH, "//li[@class='current']")
+    INFO_ACCOUNT = (By.XPATH, "//a[text()='Інформація по аккаунту']")
+    ADDRESS_BOOK = (By.XPATH, "//a[text()='Адресна книга']")
+    SUBSCRIBED_NEWS = (By.XPATH, "//a[text()='Підписки на новини']")
+    MY_REVIEWS = (By.XPATH, "//a[text()='Мої відгуки про товари']")
+    MY_ORDERS = (By.XPATH, "//a[text()='Мої замовлення']")
 
 
 class CategoryPageLocators:
