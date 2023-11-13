@@ -55,18 +55,18 @@ class TestSignupLoginPage:
         page.is_forgot_pass()
         page.is_close_button_push()
 
-    def test_login_page(self, browser):
+    def test_login(self, browser):
         self.link_to_cabinet = browser.current_url
         page = SignupLoginPage(browser, self.link_to_cabinet)
         page.is_login_signup_push()
-        page.is_login_email_input("bereza.olena@gmail.com")
-        page.is_login_password_input("wBVU6erRwWzb5mE")
+        page.is_login_email_input(sets.TEST_EMAIL)
+        page.is_login_password_input(sets.PASSWORD)
         page.is_login_button_push()
         # page.is_login_successful()
         page.is_user_button_push()
         page.is_logout_push()
 
-    def test_signup_page(self, browser):
+    def test_signup(self, browser):
         self.link_to_cabinet = browser.current_url
         page = SignupLoginPage(browser, self.link_to_cabinet)
         page.is_login_signup_push()

@@ -1,7 +1,9 @@
 MAIN_LINK = "https://knigosklad.com.ua/ua/"
 TEST_EMAIL = "bereza.olena@gmail.com"
 PASSWORD = "wBVU6erRwWzb5mE"
-IMPLICITLY_WAIT = 10 #неявні очікування (сек)
-EXPLICITLY_WAIT = 10 #явні очікування (сек)
-
-
+IMPLICITLY_WAIT = 10
+EXPLICITLY_WAIT = 10
+TEST_NAME = "kATE"
+TEST_LASTNAME = "SMITH"
+TEST_PHONE = "+38 050 555-66-33"
+NOTICE = "SORRY TEST"
