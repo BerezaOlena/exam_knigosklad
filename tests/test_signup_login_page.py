@@ -63,6 +63,10 @@ class TestSignupLoginPage:
         page.is_login_password_input(sets.PASSWORD)
         page.is_login_button_push()
         # page.is_login_successful()
+
+    def test_logout(self, browser):
+        self.link_to_cabinet = browser.current_url
+        page = SignupLoginPage(browser, self.link_to_cabinet)
         page.is_user_button_push()
         page.is_logout_push()
 

@@ -62,9 +62,9 @@ class BasePageLocators:
 
 class MainPageLocators:
     # BODY
+    CATALOG = (By.XPATH, "//div[@class='col-md-3 col-sm-6 text-block aside-nav']//nav[@class='navbar navbar-default']/div[1]")
     FICTION_LITERATURE = (
-        By.XPATH,
-        "//div[@class='wrapper-menu clearfix aside-nav']//a[@class='level-top']//span[text()='Художня література']")
+        By.XPATH, "//div[@class='row clearfix']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja']")
     HISTORICAL_LITERATURE = (
         By.XPATH,
         "//div[@class='wrapper-menu clearfix aside-nav']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/istoricheskaja-literatura']")
