@@ -64,7 +64,7 @@ class MainPageLocators:
     # BODY
     FICTION_LITERATURE = (
         By.XPATH,
-        "//div[@class='wrapper-menu clearfix aside-nav']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja']")
+        "//div[@class='wrapper-menu clearfix aside-nav']//a[@class='level-top']//span[text()='Художня література']")
     HISTORICAL_LITERATURE = (
         By.XPATH,
         "//div[@class='wrapper-menu clearfix aside-nav']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/istoricheskaja-literatura']")
@@ -84,12 +84,11 @@ class MainPageLocators:
 
     NOVELTY_TEXT = (By.XPATH, "//h2[text()='Новинки']")
     NOVELTY_BOOKS_3 = (
-        By.XPATH, "//div[@class='product-name']//a[@href='https://knigosklad.com.ua/ua/bridzhertoni-gercog-i-ja-ukr']")
+        By.XPATH, "//div[@id='home-slider-1326']//div[@class='owl-wrapper']//li[3]//div[@class='product-name']")
 
     BESTSELLERS_TEXT = (By.XPATH, "//div[text()='Бестселери']")
     BESTSELLERS_BOOKS_2 = (
-        By.XPATH,
-        "//div[@class='product-name']//a[@href='https://knigosklad.com.ua/ua/peremagati-ukrains-koju-pro-movu-nenavisti-j-ljubovi-kn-3-m']")
+        By.XPATH, "//div[@id='home-slider-7212']//div[@class='owl-wrapper']//li[3]//div[@class='product-name']")
 
     POPULAR_CATEGORIES_TEXT = (By.XPATH, "//div[text()='Популярні категорії']")
     POPULAR_CATEGORIES_2 = (By.XPATH, "//a[text()='Освіта']")
@@ -198,44 +197,43 @@ class CategoryPageLocators:
     PAGE_NEXT_CATEGORY_DOWN = (By.XPATH, "//div[@class='category-products']/div[2]//div[@class='pager']//li[6]")
     SORT_NAME = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[2]/select/option[1]")
+        "//div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[2]/select/option[1]")
     SORT_PRICE = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[2]/select/option[2]")
+        "//div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[2]/select/option[2]")
     SORT_NEW = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[2]/select/option[3]")
+        "//div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[2]/select/option[3]")
     SORT_MOST_VIEWED = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[2]/select/option[4]")
+        "//div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[2]/select/option[4]")
     SORT_TEXT = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[2]/label")
+        "//div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[2]/label")
     SORT_BUTTON = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[2]/div[1]/button")
+        "//div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[2]/div[1]/button")
     SORT_ICON = (
-        By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/a")
+        By.XPATH, "//div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/a")
     ARTICLE = (By.XPATH, "//div[@class='seo_article']")
     ON_PAGE = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[1]/label")
+        "//div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[1]/label")
     ON_PAGE_BUTTON = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[1]/div[1]/button")
+        "//div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[1]/div[1]/button")
     ON_PAGE_20 = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[1]/div[1]/div[1]//li[1]")
+        "//div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[1]/div[1]/div[1]//li[1]")
     ON_PAGE_40 = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[1]/div[1]/div[1]//li[2]")
+        "//div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[1]/div[1]/div[1]//li[2]")
     ON_PAGE_80 = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[1]/div[1]/div[1]//li[3]")
+        "//div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[1]/div[1]/div[1]//li[3]")
     ON_PAGE_160 = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[1]/div[1]/div[1]//li[4]")
+        "//div[@class='category-products']/div[@class='toolbar clearfix']/div[@class='sorter']/div/div[1]/div[1]/div[1]//li[4]")
 
 
 class OrderPageLocators:
@@ -263,43 +261,59 @@ class SearchPageLocators:
     RESULT = (By.XPATH, "//div[@class='page-title']")
     ON_PAGE_SEARCH = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[1]/label")
+        "//div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[1]/label")
     ON_PAGE_BUTTON_SEARCH = (
         By.XPATH,
-        "///div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[1]/div[1]/button")
+        "//div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[1]/div[1]/button")
     ON_PAGE_20_SEARCH = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[1]/div[1]/div[1]//li[1]")
+        "//div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[1]/div[1]/div[1]//li[1]")
     ON_PAGE_40_SEARCH = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[1]/div[1]/div[1]//li[2]")
+        "//div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[1]/div[1]/div[1]//li[2]")
     ON_PAGE_80_SEARCH = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[1]/div[1]/div[1]//li[3]")
+        "//div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[1]/div[1]/div[1]//li[3]")
     ON_PAGE_160_SEARCH = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[1]/div[1]/div[1]//li[4]")
+        "//div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[1]/div[1]/div[1]//li[4]")
     SORT_RELEVANT_SEARCH = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[2]/select/option[1]")
+        "//div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[2]/select/option[1]")
     SORT_NAME_SEARCH = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[2]/select/option[2]")
+        "//div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[2]/select/option[2]")
     SORT_PRICE_SEARCH = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[2]/select/option[3]")
+        "//div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[2]/select/option[3]")
     SORT_NEW_SEARCH = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[2]/select/option[4]")
+        "//div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[2]/select/option[4]")
     SORT_MOST_VIEWED_SEARCH = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[2]/select/option[5]")
+        "//div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[2]/select/option[5]")
     SORT_TEXT_SEARCH = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[2]/label")
+        "//div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[2]/label")
     SORT_BUTTON_SEARCH = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[2]/div[1]/button")
+        "//div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/div[2]/div[1]/button")
     SORT_ICON_SEARCH = (
         By.XPATH,
-        "//div[@id='amshopby-page-container']/div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/a")
+        "//div[@class='category-products']/div[@class='toolbar clearfix no-pagination']/div[@class='sorter']/div/a")
+
+
+class ProductPageLocators:
+    BOOK_AUTHOR = (
+        By.XPATH,
+        "//div[@class='product-shop col-sm-6 medium-layout a-left']//a[@href='https://knigosklad.com.ua/ua/catalogsearch/result/?q=%D0%93%D0%BE%D0%BD%D1%87%D0%B0%D1%80%D0%BE%D0%B2%D0%B0+%D0%9C.']")
+    BOOK_NAME = (
+        By.XPATH,
+        "//div[@class='product-shop col-sm-6 medium-layout a-left']//h1[text()='Чарівні абетки. Різдвяна абетка ']")
+    BOOK_PRICE = (
+        By.XPATH,
+        "//div[@class='product-shop col-sm-6 medium-layout a-left']//div[@class='price-box']//span[@class='price']")
+    BOOK_TO_CART = (By.XPATH, "//button[@id='product-addtocart-button']")
+    BOOK_TO_WISHLIST = (By.XPATH, "//ul[@class='add-to-links clearfix']//i[@class='fa fa-heart']")
+    BOOK_DESCRIPTION = (By.XPATH, "//div[@class='panel-title']")
+    BOOK_DESCRIPTION_TEXT = (By.XPATH, "//div[@class='std']")
