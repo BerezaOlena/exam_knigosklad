@@ -7,12 +7,12 @@ opts_chrome = ChromeOptions()
 opts_firefox = FireOptions()
 
 def pytest_addoption(parser):
-    parser.addoption('--browser_mode', action='store', default="headless",
-                     help="By default is headless mode, but you can set --browser_mode='qui'")
+    parser.addoption('--browser_mode', action='store', default="qui",
+                     help="By default is headless mode, but you can set --browser_mode='headless'")
     parser.addoption('--browser_name', action='store', default="chrome",
                      help="By default is chrome, but you can set --browser_name='firefox'")
-    parser.addoption('--browser_window_size', action='store', default="norma",
-                     help="By default is norma mode, but you can set --browser_window_size='max'")
+    parser.addoption('--browser_window_size', action='store', default="max",
+                     help="By default is norma mode, but you can set --browser_window_size='norma'")
 
 @pytest.fixture(scope="class")
 def browser(request):

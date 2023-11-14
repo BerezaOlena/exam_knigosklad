@@ -315,16 +315,17 @@ class SearchPageLocators:
 
 
 class ProductPageLocators:
-    BOOK_AUTHOR = (
-        By.XPATH,
-        "//div[@class='product-shop col-sm-6 medium-layout a-left']//a[@href='https://knigosklad.com.ua/ua/catalogsearch/result/?q=%D0%93%D0%BE%D0%BD%D1%87%D0%B0%D1%80%D0%BE%D0%B2%D0%B0+%D0%9C.']")
-    BOOK_NAME = (
-        By.XPATH,
-        "//div[@class='product-shop col-sm-6 medium-layout a-left']//h1[text()='Чарівні абетки. Різдвяна абетка ']")
+    BOOK_NAME = (By.XPATH, "//div[@class='product-shop col-sm-6 medium-layout a-left']//div[@class='product-name']")
     BOOK_PRICE = (
         By.XPATH,
         "//div[@class='product-shop col-sm-6 medium-layout a-left']//div[@class='price-box']//span[@class='price']")
+    BOOK_AVAILABILITY = (
+        By.XPATH, "//div[@class='product-shop col-sm-6 medium-layout a-left']//p[@class='availability in-stock']")
+    BOOK_NUMBER = (
+        By.XPATH, "//div[@class='product-shop col-sm-6 medium-layout a-left']//div[@class='sku']")
     BOOK_TO_CART = (By.XPATH, "//button[@id='product-addtocart-button']")
     BOOK_TO_WISHLIST = (By.XPATH, "//ul[@class='add-to-links clearfix']//i[@class='fa fa-heart']")
     BOOK_DESCRIPTION = (By.XPATH, "//div[@class='panel-title']")
     BOOK_DESCRIPTION_TEXT = (By.XPATH, "//div[@class='std']")
+    SUCCESSFUL_CLOSE = (
+        By.XPATH, "//div[@id='AddToCart-popup']//div[@class='close-popup']//i[@class='fa fa-times']")
