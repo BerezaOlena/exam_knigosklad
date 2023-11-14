@@ -19,8 +19,8 @@ class TestCabinetPage:
         page_s = SignupLoginPage(browser, self.link_to_cabinet)
         page = CabinetPage(browser, self.link_to_cabinet)
         page_s.is_login_signup_push()
-        page_s.is_login_email_input("bereza.olena@gmail.com")
-        page_s.is_login_password_input("wBVU6erRwWzb5mE")
+        page_s.is_login_email_input(sets.TEST_EMAIL)
+        page_s.is_login_password_input(sets.PASSWORD)
         page_s.is_login_button_push()
         page.is_user_button()
         page_s.is_user_button_push()
@@ -45,5 +45,8 @@ class TestCabinetPage:
         page.is_my_reviews()
         page.is_my_orders()
 
-# pytest -s -v -m cabinet_page --browser_mode="gui"
-# pytest -s -v --browser_mode="gui"
+# pytest -s -v
+# -m "cabinet_page"
+# --browser_name="firefox"
+# --browser_mode="gui"
+# --browser_window_size="max"

@@ -53,6 +53,8 @@ class TestCategoryPage:
         page.is_on_page_80()
         page.is_on_page_160()
 
-# pytest -s -v -m category_page --browser_mode="gui"
 # pytest -s -v
-
+# -m "category_page"
+# --browser_name="firefox"
+# --browser_mode="gui"
+# --browser_window_size="max"
