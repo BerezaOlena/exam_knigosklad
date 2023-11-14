@@ -11,7 +11,7 @@ import random
 class TestMainPage:
 
     def setup_method(self):
-        user_name = "%032x" % random.getrandbits(128)
+        user_name = "%016x" % random.getrandbits(64)
         self.email_for_subscribe = f"{user_name}@mail.com"
 
     def test_get_main_page(self, browser):
@@ -38,30 +38,37 @@ class TestMainPage:
         page.is_button_login_signup()
         page.is_button_cart_icon()
         page.is_button_cart()
-        page.is_button_catalog_scrolling()
-        page.is_button_catalog_button_scrolling()
-        page.is_button_fiction_literature_scrolling()
-        page.is_button_historical_literature_scrolling()
-        page.is_button_historical_novels_scrolling()
-        page.is_button_logo_scrolling()
-        page.is_button_search_button_scrolling()
-        page.is_button_cart_scrolling()
-        page.is_button_cart_count_scrolling()
+        page.explicitly_wait(3)
 
     def test_main_page_body(self, browser):
         self.link_to_cabinet = browser.current_url
         page = MainPage(browser, self.link_to_cabinet)
-        page.is_button_fiction_literature()
-        page.is_button_historical_literature()
-        page.is_button_historical_novels()
+        page.is_left_arrow()
+        page.is_right_arrow()
         page.is_button_slide_menu_1()
+        page.is_right_arrow_push()
+        page.explicitly_wait(2)
         page.is_button_slide_menu_2()
+        page.is_right_arrow_push()
+        page.explicitly_wait(2)
         page.is_button_slide_menu_3()
+        page.is_right_arrow_push()
+        page.explicitly_wait(2)
         page.is_button_slide_menu_4()
+        page.is_right_arrow_push()
+        page.explicitly_wait(2)
         page.is_button_slide_menu_5()
+        page.is_right_arrow_push()
+        page.explicitly_wait(2)
         page.is_button_slide_menu_6()
+        page.is_right_arrow_push()
+        page.explicitly_wait(2)
         page.is_button_slide_menu_7()
+        page.is_right_arrow_push()
+        page.explicitly_wait(2)
         page.is_button_slide_menu_8()
+        page.is_right_arrow_push()
+        page.explicitly_wait(2)
         page.is_button_slide_menu_9()
         page.is_button_novelty_text()
         page.is_button_novelty_books_3()
@@ -71,6 +78,30 @@ class TestMainPage:
         page.is_button_popular_categories_2()
         page.is_button_popular_categories_2_text()
         page.is_button_read_together()
+        page.is_button_fiction_literature()
+        page.explicitly_wait(2)
+        page.is_button_historical_literature()
+        page.explicitly_wait(2)
+        page.is_button_historical_novels()
+        page.explicitly_wait(2)
+
+    def test_main_page_header_scroll(self, browser):
+        self.link_to_cabinet = browser.current_url
+        page = MainPage(browser, self.link_to_cabinet)
+        page.scroll_page()
+        page.is_button_catalog_scrolling()
+        page.is_button_catalog_button_scrolling()
+        page.is_button_fiction_literature_scrolling()
+        page.explicitly_wait(2)
+        page.is_button_historical_literature_scrolling()
+        page.explicitly_wait(2)
+        page.is_button_historical_novels_scrolling()
+        page.explicitly_wait(2)
+        page.is_button_logo_scrolling()
+        page.is_button_search_button_scrolling()
+        page.is_button_cart_scrolling()
+        page.is_button_cart_count_scrolling()
+        page.explicitly_wait(2)
 
     def test_main_page_footer(self, browser):
         self.link_to_cabinet = browser.current_url
@@ -87,9 +118,19 @@ class TestMainPage:
         page.is_button_policy_footer()
         page.is_button_address_footer()
         page.is_button_made_in_footer()
+        page.explicitly_wait(2)
 
     def test_main_page_subscribed_action(self, browser):
         self.link_to_cabinet = browser.current_url
         page = MainPage(browser, self.link_to_cabinet)
         page.is_button_subscribed_email_footer_input(self.email_for_subscribe)
+        page.explicitly_wait(2)
         page.is_button_subscribed_button_footer_push()
+        page.explicitly_wait(2)
+
+
+# pytest -s -v
+# -m "main_page"
+# --browser_name="firefox"
+# --browser_mode="gui"
+# --browser_window_size="max"

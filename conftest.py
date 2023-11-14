@@ -43,7 +43,7 @@ def browser(request):
     if browser_window_size == "max":
         browser.maximize_window()
     elif browser_window_size == "norma":
-        browser.set_window_size(1200, 800)
+        browser.set_window_size(1400, 980)
     else:
         print("must be max or norma")
 

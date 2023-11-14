@@ -23,7 +23,7 @@ class BasePageLocators:
         "//a[@href='https://knigosklad.com.ua/ua/customer/account/login/referer/aHR0cHM6Ly9rbmlnb3NrbGFkLmNvbS51YS91YS8,/']")
     CART_ICON = (By.XPATH, "//div[@class='cart-wrapper']//a[@class='top-cart-icon']")
     CART = (By.XPATH, "//div[@class='cart-wrapper']//span[@class='cart-qty']")
-
+    # HEADER_SCROLLING = (By.XPATH, "//div[@class='header-wrapper']")
     CATALOG_SCROLLING = (By.XPATH, "//header[@id='sticky-header']//span[@class='catalog-menu-text']")
     CATALOG_BUTTON_SCROLLING = (
         By.XPATH, "//header[@id='sticky-header']//div[@class='pull-left']//button[@type='button']")
@@ -48,7 +48,7 @@ class BasePageLocators:
     SUBSCRIBED_LABEL_FOOTER = (
         By.XPATH, "//label[text()='Підпишіться, щоб бути в курсі нових надходжень і спеціальних пропозицій']")
     SUBSCRIBED_EMAIL_FOOTER = (By.XPATH, "//input[@name='email']")
-    SUBSCRIBED_BUTTON_FOOTER = (By.XPATH, "//button[@title='Підписатись']")
+    SUBSCRIBED_BUTTON_FOOTER = (By.XPATH, "//button[@class='btn btn-default']//span[text()='Підписатись']")
     O_NAS_FOOTER = (By.XPATH, "//footer[@id='footer']//a[@href='https://knigosklad.com.ua/ua/o-nas']")
     PAYMENT_DELIVERY_FOOTER = (
         By.XPATH, "//footer[@id='footer']//a[@href='https://knigosklad.com.ua/ua/oplata-dostavka']")
@@ -62,16 +62,22 @@ class BasePageLocators:
 
 class MainPageLocators:
     # BODY
-    CATALOG = (By.XPATH, "//div[@class='col-md-3 col-sm-6 text-block aside-nav']//nav[@class='navbar navbar-default']/div[1]")
+    CATALOG = (
+        By.XPATH, "//div[@class='col-md-3 col-sm-6 text-block aside-nav']//nav[@class='navbar navbar-default']/div[1]")
     FICTION_LITERATURE = (
         By.XPATH, "//div[@class='row clearfix']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja']")
     HISTORICAL_LITERATURE = (
         By.XPATH,
-        "//div[@class='wrapper-menu clearfix aside-nav']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/istoricheskaja-literatura']")
+        "//div[@class='row clearfix']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/istoricheskaja-literatura']")
     HISTORICAL_NOVELS = (
         By.XPATH,
-        "//div[@class='wrapper-menu clearfix aside-nav']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/istoricheskaja-literatura/istoricheskie-romany']")
-
+        "//div[@class='row clearfix']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/istoricheskaja-literatura/istoricheskie-romany']")
+    LEFT_ARROW = (
+        By.XPATH,
+        "//div[@class='col-md-9 col-sm-12 a-center text-block']//div[@class='tp-leftarrow tparrows default round']")
+    RIGHT_ARROW = (
+        By.XPATH,
+        "//div[@class='col-md-9 col-sm-12 a-center text-block']//div[@class='tp-rightarrow tparrows default round']")
     SLIDE_MENU_1 = (By.XPATH, "//li[@data-link='detskaja/hudozhestvennaja']")
     SLIDE_MENU_2 = (By.XPATH, "//li[@data-link='obrazovanie/srednjaja-shkola/vneklassnoe-chtenie']")
     SLIDE_MENU_3 = (By.XPATH, "//li[@data-link='gifts']")
@@ -81,7 +87,7 @@ class MainPageLocators:
     SLIDE_MENU_7 = (By.XPATH, "//li[@data-link='kartiny-po-nomeram']")
     SLIDE_MENU_8 = (By.XPATH, "//li[@data-link='stationery']")
     SLIDE_MENU_9 = (By.XPATH, "//li[@data-link='stationery/igrushki-sklad']")
-
+    SLIDE_MENU = (By.XPATH, "//div[@class='col-md-9 col-sm-12 a-center text-block']")
     NOVELTY_TEXT = (By.XPATH, "//h2[text()='Новинки']")
     NOVELTY_BOOKS_3 = (
         By.XPATH, "//div[@id='home-slider-1326']//div[@class='owl-wrapper']//li[3]//div[@class='product-name']")
@@ -102,6 +108,10 @@ class MainPageLocators:
 class SignupLoginPageLocators:
     LOGIN_TEXT = (By.XPATH, "//h3[text()='Вхід']")
     LOGIN_PUSH = (By.XPATH, "//div[@class='page-title clearfix']//a[text()='Вхід']")
+    GOOGLE_BUTTON = (
+        By.XPATH, "//div[@class='providers providers_unpaginated']//a[@id='button_google'][@class='button']")
+    GOOGLE_TITLE = (By.XPATH, "//div[@class='providers providers_unpaginated']//div[@id='name_google'][@class='name']")
+    GOOGLE_TEXT = (By.XPATH, "//p[text()='Якщо у вас є акаунт, будь ласка увійдіть.']")
     LOGIN_EMAIL_TEXT = (By.XPATH, "//label[@for='email']")
     LOGIN_EMAIL = (By.XPATH, "//input[@name='login[username]']")
     LOGIN_PASSWORD_TEXT = (By.XPATH, "//label[@for='pass']")
@@ -109,7 +119,7 @@ class SignupLoginPageLocators:
     REMEMBER_ME = (By.XPATH, "//li[@id='remember-me-box-login']//input[@name='persistent_remember_me']")
     LOGIN = (By.XPATH, "//span[text()='Вхід']")
     FORGOT_PASS = (By.XPATH, "//a[text()='Забули пароль?']")
-
+    REQUIRED_FIELDS = (By.XPATH, "//div[@class='form-group']//p[@class='required']")
     SIGNUP = (By.XPATH, "//a[text()='Зареєструватись']")
     PERSONAL_INFO = (By.XPATH, "//h3[text()='Персональна інформація']")
     FIRSTNAME_TEXT = (By.XPATH, "//label[@for='firstname']")
@@ -133,8 +143,9 @@ class SignupLoginPageLocators:
 
     CLOSE_BUTTON = (By.XPATH, "//div[@class='login-wrapper']//div[@class='close-popup']")
 
-    REGISTER_SUCCESSFUL = (By.XPATH, "//div[@id='window-overlay-register']")
-    LOGIN_SUCCESSFUL = (By.XPATH, "//div[@id='window-overlay-login']")
+    ALERT_SUCCESSFUL = (By.XPATH, "//div[@id='ajaxkit-popup-content']")
+    LOGOUT_SUCCESSFUL = (
+        By.XPATH, "//p[text()='Ви успішно вийшли і за 5 секунд для вас відкриється головна сторінка сайту!']")
 
 
 class CabinetPageLocators:

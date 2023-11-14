@@ -70,7 +70,7 @@ class SignupLoginPage(base_page.BasePage):
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_login_successful(self):
-        assert self.is_element_appears_after_while(*locators.SignupLoginPageLocators.LOGIN_SUCCESSFUL, timeout=5), \
+        assert self.is_element_appears_after_while(*locators.SignupLoginPageLocators.ALERT_SUCCESSFUL, timeout=5), \
             "Button 'login_successful' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
@@ -200,7 +200,7 @@ class SignupLoginPage(base_page.BasePage):
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_register_successful(self):
-        assert self.is_element_appears_after_while(*locators.SignupLoginPageLocators.REGISTER_SUCCESSFUL, timeout=5), \
+        assert self.is_element_appears_after_while(*locators.SignupLoginPageLocators.ALERT_SUCCESSFUL, timeout=5), \
             "Button 'register_successful' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
@@ -217,4 +217,29 @@ class SignupLoginPage(base_page.BasePage):
     def is_logout_push(self):
         assert self.click_element(*locators.CabinetPageLocators.LOGOUT), \
             "Button 'logout_push' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_logout_successful(self):
+        assert self.is_element_appears_after_while(*locators.SignupLoginPageLocators.LOGOUT_SUCCESSFUL, timeout=5), \
+            "Button 'logout_successful' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_google_button(self):
+        assert self.is_element_present(*locators.SignupLoginPageLocators.GOOGLE_BUTTON), \
+            "Button 'google_button' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_google_title(self):
+        assert self.is_element_present(*locators.SignupLoginPageLocators.GOOGLE_TITLE), \
+            "Button 'google_title' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_google_text(self):
+        assert self.is_element_present(*locators.SignupLoginPageLocators.GOOGLE_TEXT), \
+            "Button 'google_text' is not present"
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
+
+    def is_required_fields(self):
+        assert self.is_element_present(*locators.SignupLoginPageLocators.REQUIRED_FIELDS), \
+            "Button 'required_fields' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
