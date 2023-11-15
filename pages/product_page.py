@@ -40,7 +40,7 @@ class ProductPage(base_page.BasePage):
     def is_book_to_cart_push(self):
         assert self.click_element(*locators.ProductPageLocators.BOOK_TO_CART), \
             "Button 'book_to_cart_push' is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - OK")
+        print(f"\n{inspect.currentframe().f_code.co_name} - OK")
 
     def is_to_cart_successful(self):
         assert self.is_element_appears_after_while(*locators.OrderPageLocators.CART_SUCCESSFUL, timeout=7), \
@@ -55,7 +55,7 @@ class ProductPage(base_page.BasePage):
     def is_book_to_wishlist_push(self):
         assert self.click_element(*locators.ProductPageLocators.BOOK_TO_WISHLIST), \
             "Button 'book_to_wishlist_push' is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - OK")
+        print(f"\n{inspect.currentframe().f_code.co_name} - OK")
 
     def is_to_wishlist_successful(self):
         assert self.is_element_appears_after_while(*locators.OrderPageLocators.CART_SUCCESSFUL, timeout=7), \

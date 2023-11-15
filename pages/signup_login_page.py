@@ -212,7 +212,7 @@ class SignupLoginPage(base_page.BasePage):
     def is_user_button_push(self):
         assert self.click_element(*locators.CabinetPageLocators.USER_BUTTON), \
             "Button 'user_button_push' is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - OK")
+        print(f"\n{inspect.currentframe().f_code.co_name} - OK")
 
     def is_logout_push(self):
         assert self.click_element(*locators.CabinetPageLocators.LOGOUT), \

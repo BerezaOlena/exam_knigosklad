@@ -9,9 +9,11 @@ from ..settings import sets
 @pytest.mark.category_page
 class TestCategoryPage:
 
-    def test_category_page(self, browser):
+    def test_get_main_page(self, browser):
         page = BasePage(browser, sets.MAIN_LINK)
         page.open()
+
+    def test_category_page(self, browser):
         self.link_to_cabinet = browser.current_url
         page = CategoryPage(browser, self.link_to_cabinet)
         page.is_fiction_literature_push()
