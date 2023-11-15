@@ -11,7 +11,7 @@ import random
 class TestSignupLoginPage:
 
     def setup_method(self):
-        user_name = "%016x" % random.getrandbits(128)
+        user_name = "%016x" % random.getrandbits(64)
         self.email_for_signup = f"{user_name}@mail.com"
         self.user_name_for_signup = f"{user_name}"
         self.user_name2_for_signup = f"qq{user_name}qq"
@@ -95,5 +95,5 @@ class TestSignupLoginPage:
 # pytest -s -v
 # -m "signup_login_page"
 # --browser_name="firefox"
-# --browser_mode="gui"
-# --browser_window_size="max"
+# --browser_mode="headless"
+# --browser_window_size="norma"

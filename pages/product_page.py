@@ -7,6 +7,7 @@ class ProductPage(base_page.BasePage):
     def is_button_bestsellers_books_2_push(self):
         assert self.hover_action(*locators.MainPageLocators.BESTSELLERS_BOOKS_2), \
             "Button 'bestsellers_books_2_push' is not present"
+        self.explicitly_wait(3)
         assert self.click_element(*locators.MainPageLocators.BESTSELLERS_BOOKS_2), \
             "Button 'bestsellers_books_2_push' is not present"
         print(f"\n{inspect.currentframe().f_code.co_name} - OK")

@@ -38,12 +38,12 @@ class TestCategoryPage:
         page.is_page_4_category_down()
         page.is_page_5_category_down()
         page.is_page_next_category_down()
+        page.is_sort_button()
         page.is_sort_name()
         page.is_sort_price()
         page.is_sort_new()
         page.is_sort_most_viewed()
         page.is_sort_text()
-        page.is_sort_button()
         page.is_sort_icon()
         page.is_article()
         page.is_on_page()
@@ -52,9 +52,11 @@ class TestCategoryPage:
         page.is_on_page_40()
         page.is_on_page_80()
         page.is_on_page_160()
+        page.is_on_page_button()
+        page.explicitly_wait(2)
 
 # pytest -s -v
 # -m "category_page"
 # --browser_name="firefox"
-# --browser_mode="gui"
-# --browser_window_size="max"
+# --browser_mode="headless"
+# --browser_window_size="norma"

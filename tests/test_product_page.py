@@ -17,7 +17,7 @@ class TestProductPage:
     def test_product_page(self, browser):
         self.link_to_cabinet = browser.current_url
         page = ProductPage(browser, self.link_to_cabinet)
-        page.scroll_page()
+        page.scroll_page2()
         page.explicitly_wait(3)
         page.is_button_bestsellers_books_2_push()
         page.is_book_name()
@@ -55,5 +55,5 @@ class TestProductPage:
 # pytest -s -v
 # -m "product_page"
 # --browser_name="firefox"
-# --browser_mode="gui"
-# --browser_window_size="max"
+# --browser_mode="headless"
+# --browser_window_size="norma"

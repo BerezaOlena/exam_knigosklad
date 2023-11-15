@@ -256,7 +256,8 @@ class OrderPageLocators:
     CITY = (By.XPATH, "//div[@id='novaposhta_cities_chosen']")
     CITY_DNIPRO = (By.XPATH, "//li[@data-option-array-index='1']")
     FREE_SHIPPING = (By.XPATH, "//input[@id='s_method_freeshipping_freeshipping']")
-    TELEPHONE = (By.XPATH, "//input[@id='billing:telephone']")
+    TELEPHONE = (By.XPATH, "//label[@for='billing:telephone']")
+    TELEPHONE_INPUT = (By.XPATH, "//input[@id='billing:telephone']") # [@value='+38 0'] необхідно передати
     PAYMENT = (By.XPATH, "//input[@id='p_method_checkmo']")
     NOTICE = (By.XPATH, "//textarea[@id='customer_comment']")
     CHECKOUT = (By.XPATH, "//button[@class='btn btn-primary btn-checkout opc-btn-checkout']")
@@ -266,6 +267,18 @@ class OrderPageLocators:
         "//ul[@class='products-grid row three-columns first last odd']//li[2]//i[@class='fa fa-shopping-cart']")
     CART_SUCCESSFUL = (By.XPATH, "//div[@class='popup-text success-msg']")
     TO_ORDER = (By.XPATH, "//button[@class='btn btn-primary btn-proceed-checkout']")
+    FIRST_BOOK = (By.XPATH, "//li[5]//div[@class='product-name']")
+    FIRST_BOOK_PRICE = (By.XPATH, "//li[5]//div[@class='price-box']//span[@class='price']")
+    FIRST_BOOK_TO_CART = (By.XPATH, "//li[5]//button[@class='btn btn-default btn-cart AjaxKit-addtocart-link']")
+    SECOND_BOOK = (By.XPATH, "//li[8]//div[@class='product-name']")
+    SECOND_BOOK_PRICE = (By.XPATH, "//li[8]//div[@class='price-box']//span[@class='price']")
+    SECOND_BOOK_TO_CART = (By.XPATH, "//li[8]//button[@class='btn btn-default btn-cart AjaxKit-addtocart-link']")
+    TOTAL_PRICE = (By.XPATH, "//tfoot//td[@class='a-right']//span[@class='price']")
+    CHECKOUT_BUTTON = (
+        By.XPATH, "//button[@class='btn btn-primary btn-proceed-checkout']//span[text()='Оформити замовлення']")
+    CHECKOUT_ORDER_BUTTON = (
+        By.XPATH,
+        "//button[@class='btn btn-primary btn-checkout opc-btn-checkout']//span[text()='Оформити замовлення']")
 
 
 class SearchPageLocators:

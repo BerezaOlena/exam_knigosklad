@@ -132,5 +132,5 @@ class TestMainPage:
 # pytest -s -v
 # -m "main_page"
 # --browser_name="firefox"
-# --browser_mode="gui"
-# --browser_window_size="max"
+# --browser_mode="headless"
+# --browser_window_size="norma"
