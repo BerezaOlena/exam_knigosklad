@@ -7,7 +7,7 @@ class CategoryPage(base_page.BasePage):
     def is_fiction_literature_push(self):
         assert self.click_element(*locators.MainPageLocators.FICTION_LITERATURE), \
             "Button 'fiction_literature_push' is not present"
-        print(f"\n{inspect.currentframe().f_code.co_name} - OK")
+        print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_historical_literature(self):
         assert self.hover_action(*locators.CategoryPageLocators.HISTORICAL_LITERATURE), \
@@ -78,9 +78,9 @@ class CategoryPage(base_page.BasePage):
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_book_2(self):
-        assert self.is_element_present(*locators.CategoryPageLocators.BOOK_2), \
-            "Button 'book_2' is not present"
         assert self.hover_action(*locators.CategoryPageLocators.BOOK_2), \
+            "Button 'book_2' is not present"
+        assert self.is_element_present(*locators.CategoryPageLocators.BOOK_2), \
             "Button 'book_2' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 

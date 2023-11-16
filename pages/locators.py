@@ -194,7 +194,8 @@ class CategoryPageLocators:
         By.XPATH,
         "//li[@class='amshopby-cat amshopby-cat-level-1']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/proza/sovremennaja']")
     BOOK_2 = (
-        By.XPATH, "//ul[@class='products-grid row three-columns first last odd']//li[2]//div[@class='product-name']")
+        By.XPATH,
+        "//ul[@class='products-grid row three-columns first last odd']//li[2]//div[@class='product-name']//a[@title]")
     PAGE_1_CATEGORY = (By.XPATH, "//div[@class='category-products']/div[1]//div[@class='pager']//li[1]")
     PAGE_2_CATEGORY = (By.XPATH, "//div[@class='category-products']/div[1]//div[@class='pager']//li[2]")
     PAGE_3_CATEGORY = (By.XPATH, "//div[@class='category-products']/div[1]//div[@class='pager']//li[3]")

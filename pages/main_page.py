@@ -146,6 +146,7 @@ class MainPage(base_page.BasePage):
 
     # BODY
     def is_button_fiction_literature(self):
+        self.explicitly_wait(2)
         assert self.is_element_present(*locators.MainPageLocators.FICTION_LITERATURE), \
             "Button 'fictional_literature' is not present"
         assert self.hover_action(*locators.MainPageLocators.FICTION_LITERATURE), \
