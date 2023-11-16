@@ -5,6 +5,7 @@ import inspect
 class SignupLoginPage(base_page.BasePage):
 
     def is_login_signup_push(self):
+        self.explicitly_wait(3)
         assert self.click_element(*locators.BasePageLocators.LOGIN_SIGNUP), \
             "Button 'login_signup' is not present or intractable"
         print(f"\n{inspect.currentframe().f_code.co_name} - OK")

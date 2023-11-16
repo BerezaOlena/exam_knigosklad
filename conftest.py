@@ -6,6 +6,7 @@ from selenium.webdriver.firefox.options import Options as FireOptions
 opts_chrome = ChromeOptions()
 opts_firefox = FireOptions()
 
+
 def pytest_addoption(parser):
     parser.addoption('--browser_mode', action='store', default="qui",
                      help="By default is headless mode, but you can set --browser_mode='headless'")
@@ -13,6 +14,7 @@ def pytest_addoption(parser):
                      help="By default is chrome, but you can set --browser_name='firefox'")
     parser.addoption('--browser_window_size', action='store', default="max",
                      help="By default is norma mode, but you can set --browser_window_size='norma'")
+
 
 @pytest.fixture(scope="class")
 def browser(request):
@@ -53,14 +55,12 @@ def browser(request):
 
 # pytest -s -v
 # pytest -s -v --browser_name="firefox"
+# pytest -s -v --browser_name="chrome"
+# pytest -s -v --browser_mode="headless"
 # pytest -s -v --browser_mode="gui"
 # pytest -s -v --browser_window_size="max"
+# pytest -s -v --browser_window_size="norma"
 # pytest -s -v --browser_name="firefox" --browser_mode="gui"
 # pytest -s -v --browser_name="firefox" --browser_window_size="max"
 # pytest -s -v --browser_mode="gui" --browser_window_size="max"
 # pytest -s -v --browser_name="firefox" --browser_mode="gui" --browser_window_size="max"
-
-
-
-
-

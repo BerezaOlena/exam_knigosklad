@@ -1,5 +1,6 @@
 import pytest
 from ..pages.base_page import BasePage
+from ..pages.main_page import MainPage
 from ..pages.category_page import CategoryPage
 from ..settings import sets
 
@@ -16,6 +17,10 @@ class TestCategoryPage:
     def test_category_page(self, browser):
         self.link_to_cabinet = browser.current_url
         page = CategoryPage(browser, self.link_to_cabinet)
+        page_m = MainPage(browser, self.link_to_cabinet)
+        page_m.is_button_fiction_literature()
+        page_m.is_button_historical_literature()
+        page_m.is_button_historical_novels()
         page.is_fiction_literature_push()
         page.is_historical_literature()
         page.is_prose()

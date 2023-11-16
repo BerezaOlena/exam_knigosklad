@@ -5,9 +5,6 @@ import inspect
 class CategoryPage(base_page.BasePage):
 
     def is_fiction_literature_push(self):
-        assert self.hover_action(*locators.MainPageLocators.CATALOG), \
-            "Element 'fiction_literature' is not present"
-        self.explicitly_wait(2)
         assert self.click_element(*locators.MainPageLocators.FICTION_LITERATURE), \
             "Button 'fiction_literature_push' is not present"
         print(f"\n{inspect.currentframe().f_code.co_name} - OK")
@@ -136,37 +133,31 @@ class CategoryPage(base_page.BasePage):
     def is_page_1_category_down(self):
         assert self.is_element_present(*locators.CategoryPageLocators.PAGE_1_CATEGORY_DOWN), \
             "Button 'page_1_category_down' is not present"
-        self.explicitly_wait(1)
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_page_2_category_down(self):
         assert self.is_element_present(*locators.CategoryPageLocators.PAGE_2_CATEGORY_DOWN), \
             "Button 'page_2_category_down' is not present"
-        self.explicitly_wait(1)
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_page_3_category_down(self):
         assert self.is_element_present(*locators.CategoryPageLocators.PAGE_3_CATEGORY_DOWN), \
             "Button 'page_3_category_down' is not present"
-        self.explicitly_wait(1)
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_page_4_category_down(self):
         assert self.is_element_present(*locators.CategoryPageLocators.PAGE_4_CATEGORY_DOWN), \
             "Button 'page_4_category_down' is not present"
-        self.explicitly_wait(1)
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_page_5_category_down(self):
         assert self.is_element_present(*locators.CategoryPageLocators.PAGE_5_CATEGORY_DOWN), \
             "Button 'page_5_category_down' is not present"
-        self.explicitly_wait(1)
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_page_next_category_down(self):
         assert self.is_element_present(*locators.CategoryPageLocators.PAGE_NEXT_CATEGORY_DOWN), \
             "Button 'page_next_category_down' is not present"
-        self.explicitly_wait(1)
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_sort_name(self):

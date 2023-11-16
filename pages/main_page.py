@@ -90,6 +90,9 @@ class MainPage(base_page.BasePage):
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_button_catalog_scrolling(self):
+        assert self.hover_action(*locators.BasePageLocators.CATALOG_SCROLLING), \
+            "Button 'catalog_button_scrolling' is not present"
+        self.explicitly_wait(1)
         assert self.is_element_present(*locators.BasePageLocators.CATALOG_SCROLLING), \
             "Button 'catalog_scrolling' is not present"
         print(f"\n{inspect.currentframe().f_code.co_name} - OK")
@@ -97,29 +100,28 @@ class MainPage(base_page.BasePage):
     def is_button_catalog_button_scrolling(self):
         assert self.is_element_present(*locators.BasePageLocators.CATALOG_BUTTON_SCROLLING), \
             "Button 'catalog_button_scrolling' is not present"
+        self.explicitly_wait(1)
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_button_fiction_literature_scrolling(self):
-        assert self.hover_action(*locators.BasePageLocators.CATALOG_BUTTON_SCROLLING), \
-            "Button 'catalog_button_scrolling' is not present"
         assert self.is_element_present(*locators.BasePageLocators.FICTION_LITERATURE_SCROLLING), \
             "Button 'fictional_literature_scrolling' is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - OK")
-
-    def is_button_historical_literature_scrolling(self):
+        self.explicitly_wait(1)
         assert self.hover_action(*locators.BasePageLocators.FICTION_LITERATURE_SCROLLING), \
             "Button 'catalog_button_scrolling' is not present"
+        self.explicitly_wait(1)
         assert self.is_element_present(*locators.BasePageLocators.HISTORICAL_LITERATURE_SCROLLING), \
             "Button 'historical_literature_scrolling' is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - OK")
-
-    def is_button_historical_novels_scrolling(self):
+        self.explicitly_wait(1)
         assert self.hover_action(*locators.BasePageLocators.HISTORICAL_LITERATURE_SCROLLING), \
             "Button 'catalog_button_scrolling' is not present"
+        self.explicitly_wait(1)
         assert self.is_element_present(*locators.BasePageLocators.HISTORICAL_NOVELS_SCROLLING), \
             "Button 'historical_novels_scrolling' is not present"
+        self.explicitly_wait(1)
         assert self.hover_action(*locators.BasePageLocators.HISTORICAL_NOVELS_SCROLLING), \
             "Button 'historical_novels_scrolling' is not present"
+        self.explicitly_wait(1)
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_button_logo_scrolling(self):
@@ -146,11 +148,13 @@ class MainPage(base_page.BasePage):
     def is_button_fiction_literature(self):
         assert self.is_element_present(*locators.MainPageLocators.FICTION_LITERATURE), \
             "Button 'fictional_literature' is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - OK")
+        assert self.hover_action(*locators.MainPageLocators.FICTION_LITERATURE), \
+            "Button 'fictional_literature' is not present"
+        print(f"\n{inspect.currentframe().f_code.co_name} - OK")
 
     def is_button_historical_literature(self):
         assert self.hover_action(*locators.MainPageLocators.FICTION_LITERATURE), \
-             "Button 'fictional_literature' is not present"
+            "Button 'fictional_literature' is not present"
         assert self.hover_action(*locators.MainPageLocators.HISTORICAL_LITERATURE), \
             "Button 'fictional_literature' is not present"
         assert self.is_element_present(*locators.MainPageLocators.HISTORICAL_LITERATURE), \
@@ -159,7 +163,7 @@ class MainPage(base_page.BasePage):
 
     def is_button_historical_novels(self):
         assert self.hover_action(*locators.MainPageLocators.FICTION_LITERATURE), \
-             "Button 'fictional_literature' is not present"
+            "Button 'fictional_literature' is not present"
         assert self.hover_action(*locators.MainPageLocators.HISTORICAL_NOVELS), \
             "Button 'fictional_literature' is not present"
         assert self.is_element_present(*locators.MainPageLocators.HISTORICAL_NOVELS), \
@@ -211,10 +215,10 @@ class MainPage(base_page.BasePage):
             "Button 'slide_menu_9' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
-    def is_button_novelty_text(self):
-        assert self.is_element_present(*locators.MainPageLocators.NOVELTY_TEXT), \
-            "Button 'novelty_text' is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - OK")
+    # def is_button_novelty_text(self):
+    #     assert self.is_element_present(*locators.MainPageLocators.NOVELTY_TEXT), \
+    #         "Button 'novelty_text' is not present"
+    #     print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_button_novelty_books_3(self):
         assert self.is_element_present(*locators.MainPageLocators.NOVELTY_BOOKS_3), \
@@ -317,10 +321,10 @@ class MainPage(base_page.BasePage):
             "Button 'address_footer' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
-    def is_button_made_in_footer(self):
-        assert self.is_element_present(*locators.BasePageLocators.MADE_IN_FOOTER), \
-            "Button 'made_in_footer' is not present"
-        print(f"{inspect.currentframe().f_code.co_name} - OK")
+    # def is_button_made_in_footer(self):
+    #     assert self.is_element_present(*locators.BasePageLocators.MADE_IN_FOOTER), \
+    #         "Button 'made_in_footer' is not present"
+    #     print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def is_left_arrow(self):
         assert self.hover_action(*locators.MainPageLocators.SLIDE_MENU), \
@@ -342,5 +346,3 @@ class MainPage(base_page.BasePage):
         assert self.click_element(*locators.MainPageLocators.RIGHT_ARROW), \
             "Button 'right_arrow' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
-
-

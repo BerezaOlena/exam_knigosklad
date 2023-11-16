@@ -70,7 +70,7 @@ class TestMainPage:
         page.is_right_arrow_push()
         page.explicitly_wait(2)
         page.is_button_slide_menu_9()
-        page.is_button_novelty_text()
+        # page.is_button_novelty_text() # прибрали з сайта
         page.is_button_novelty_books_3()
         page.is_button_bestsellers_text()
         page.is_button_bestsellers_books_2()
@@ -78,24 +78,16 @@ class TestMainPage:
         page.is_button_popular_categories_2()
         page.is_button_popular_categories_2_text()
         page.is_button_read_together()
-        page.is_button_fiction_literature()
-        page.explicitly_wait(2)
-        page.is_button_historical_literature()
-        page.explicitly_wait(2)
-        page.is_button_historical_novels()
         page.explicitly_wait(2)
 
     def test_main_page_header_scroll(self, browser):
         self.link_to_cabinet = browser.current_url
         page = MainPage(browser, self.link_to_cabinet)
         page.scroll_page()
+        page.explicitly_wait(2)
         page.is_button_catalog_scrolling()
         page.is_button_catalog_button_scrolling()
         page.is_button_fiction_literature_scrolling()
-        page.explicitly_wait(2)
-        page.is_button_historical_literature_scrolling()
-        page.explicitly_wait(2)
-        page.is_button_historical_novels_scrolling()
         page.explicitly_wait(2)
         page.is_button_logo_scrolling()
         page.is_button_search_button_scrolling()
@@ -117,7 +109,7 @@ class TestMainPage:
         page.is_button_offer_footer()
         page.is_button_policy_footer()
         page.is_button_address_footer()
-        page.is_button_made_in_footer()
+        # page.is_button_made_in_footer() # прибрали з сайта
         page.explicitly_wait(2)
 
     def test_main_page_subscribed_action(self, browser):

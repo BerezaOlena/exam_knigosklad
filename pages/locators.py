@@ -18,9 +18,7 @@ class BasePageLocators:
     CALLBACK = (By.XPATH, "//a[@id='callback-button']")
     CONTACTS_ICON = (By.XPATH, "//i[@class='fa fa-phone']")
     LOGIN_SIGNUP_ICON = (By.XPATH, "//i[@class='fa fa-user']")
-    LOGIN_SIGNUP = (
-        By.XPATH,
-        "//a[@href='https://knigosklad.com.ua/ua/customer/account/login/referer/aHR0cHM6Ly9rbmlnb3NrbGFkLmNvbS51YS91YS8,/']")
+    LOGIN_SIGNUP = (By.XPATH, "//a[@class='top-link-login AjaxKit-Singlton-Click']//i[@class='fa fa-user']")
     CART_ICON = (By.XPATH, "//div[@class='cart-wrapper']//a[@class='top-cart-icon']")
     CART = (By.XPATH, "//div[@class='cart-wrapper']//span[@class='cart-qty']")
     # HEADER_SCROLLING = (By.XPATH, "//div[@class='header-wrapper']")
@@ -63,9 +61,10 @@ class BasePageLocators:
 class MainPageLocators:
     # BODY
     CATALOG = (
-        By.XPATH, "//div[@class='col-md-3 col-sm-6 text-block aside-nav']//nav[@class='navbar navbar-default']/div[1]")
+        By.XPATH, "//div[@class='row clearfix']//nav[@class='navbar navbar-default']/div[1]")
     FICTION_LITERATURE = (
-        By.XPATH, "//div[@class='row clearfix']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja']")
+        By.XPATH,
+        "//div[@class='row clearfix']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja']")
     HISTORICAL_LITERATURE = (
         By.XPATH,
         "//div[@class='row clearfix']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/istoricheskaja-literatura']")
@@ -172,12 +171,14 @@ class CabinetPageLocators:
 
 
 class CategoryPageLocators:
+    FICTION_LITERATURE_BUTTON = (By.XPATH, "//li[@class='level0 nav-1 first level-top parent']//a[@class='level-top']")
     HISTORICAL_LITERATURE = (
         By.XPATH,
         "//li[@class='amshopby-cat amshopby-cat-level-1']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/istoricheskaja-literatura']")
     PROSE = (
         By.XPATH,
         "//li[@class='amshopby-cat amshopby-cat-level-1']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/proza']")
+    # //div[@class='row clearfix']
     CLASSIC = (
         By.XPATH,
         "//li[@class='amshopby-cat amshopby-cat-level-1']//a[@href='https://knigosklad.com.ua/ua/hudozhestvennaja/klassika']")
@@ -266,7 +267,7 @@ class OrderPageLocators:
         By.XPATH,
         "//ul[@class='products-grid row three-columns first last odd']//li[2]//i[@class='fa fa-shopping-cart']")
     CART_SUCCESSFUL = (By.XPATH, "//div[@class='popup-text success-msg']")
-    TO_ORDER = (By.XPATH, "//button[@class='btn btn-primary btn-proceed-checkout']")
+    TO_ORDER = (By.XPATH, "//header[@id='header']//a[@class='view-full-cart']//span[text()='Переглянути кошик']")
     FIRST_BOOK = (By.XPATH, "//li[5]//div[@class='product-name']")
     FIRST_BOOK_PRICE = (By.XPATH, "//li[5]//div[@class='price-box']//span[@class='price']")
     FIRST_BOOK_TO_CART = (By.XPATH, "//li[5]//button[@class='btn btn-default btn-cart AjaxKit-addtocart-link']")
@@ -279,8 +280,9 @@ class OrderPageLocators:
     CHECKOUT_ORDER_BUTTON = (
         By.XPATH,
         "//button[@class='btn btn-primary btn-checkout opc-btn-checkout']//span[text()='Оформити замовлення']")
-
-
+    CHECKOUT_CART_BUTTON = (
+        By.XPATH,
+        "//header[@id='header']//div[@class='inner-wrapper']//button[@class='btn btn-primary']//span[text()='Замовлення']")
 class SearchPageLocators:
     RESULT = (By.XPATH, "//div[@class='page-title']")
     ON_PAGE_SEARCH = (

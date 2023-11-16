@@ -44,12 +44,12 @@ class OrderPage(base_page.BasePage):
         if price:
             return price
 
-    def is_button_cart_scrolling_push(self):
-        assert self.hover_action(*locators.BasePageLocators.CART_SCROLLING), \
-            "Button 'cart_scrolling' is not present"
+    def is_button_cart_push(self):
+        assert self.hover_action(*locators.BasePageLocators.CART), \
+            "Button 'cart' is not present"
         self.explicitly_wait(2)
-        assert self.click_element(*locators.BasePageLocators.CART_SCROLLING), \
-            "Button 'cart_scrolling' is not present"
+        assert self.click_element(*locators.OrderPageLocators.TO_ORDER), \
+            "Button 'cart' is not present"
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def check_total_price_qty(self, price1, price2):
@@ -61,9 +61,6 @@ class OrderPage(base_page.BasePage):
         print(f"total_actual int: {total_actual}")
         assert total_actual == total_price, \
             "Total price doesn't match to actual"
-        # qty_actual = int(self.get_text(*locators.OrderPageLocators.QTY))
-        # assert qty_actual == qty, \
-        #     "QTY doesn't match to actual"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
 
     def is_button_checkout_push(self):

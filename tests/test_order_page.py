@@ -25,7 +25,7 @@ class TestOrderPage:
         global price_2_product
         price_2_product = page.add_to_cart_second_product()
         page.press_btn_close()
-        page.is_button_cart_scrolling_push()
+        page.is_button_cart_push()
         page.check_total_price_qty(price_1_product, price_2_product)
         page.is_button_checkout_push()
         page.is_order()
