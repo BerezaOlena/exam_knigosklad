@@ -19,7 +19,8 @@ class OrderPage(base_page.BasePage):
             "Element 'add_to_cart_first_product' is not present"
         self.explicitly_wait(2)
         price = self.get_text(*locators.OrderPageLocators.FIRST_BOOK_PRICE)
-        price = int(re.sub("[^0-9]", "", price))  # 42
+        price = str(re.sub("[^0-9,]", "", price))
+        price = float(price.replace(",", "."))
         assert self.click_element(*locators.OrderPageLocators.FIRST_BOOK_TO_CART), \
             "Element 'add_to_cart_first_product' is not present or intractable"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
@@ -37,7 +38,8 @@ class OrderPage(base_page.BasePage):
             "Element 'add_to_cart_second_product' is not present"
         self.explicitly_wait(2)
         price = self.get_text(*locators.OrderPageLocators.SECOND_BOOK_PRICE)
-        price = int(re.sub("[^0-9]", "", price))  # 42
+        price = str(re.sub("[^0-9,]", "", price))
+        price = float(price.replace(",", "."))
         assert self.click_element(*locators.OrderPageLocators.SECOND_BOOK_TO_CART), \
             "Element 'add_to_cart_second_product' is not present or intractable"
         print(f"{inspect.currentframe().f_code.co_name} - Ok")
@@ -55,7 +57,8 @@ class OrderPage(base_page.BasePage):
     def check_total_price_qty(self, price1, price2):
         total_price = self.get_text(*locators.OrderPageLocators.TOTAL_PRICE)
         self.explicitly_wait(2)
-        total_price = int(re.sub("[^0-9]", "", total_price))
+        total_price = str(re.sub("[^0-9,]", "", total_price))
+        total_price = float(total_price.replace(",", "."))
         print(f"total_prise int: {total_price}")
         total_actual = price1 + price2
         print(f"total_actual int: {total_actual}")
